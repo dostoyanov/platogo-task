@@ -1,5 +1,7 @@
 ## Platogo CSS Challenge 
 
+![Alt text](platogo-web-icon.webp)
+
 Clone the repository
 
 ```bash
@@ -12,16 +14,3 @@ Install dependencies and run development server
   npm install
   npm run dev
 ```
-
-Deploy
-
-```bash
-  npm run deploy
-```
-
-Preview dist
-
-```bash
-  npm run preview
-```
-
