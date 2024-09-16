@@ -15,7 +15,7 @@ body {
 .inner-content {
   position: relative;
   width: 920px;
-  margin: 0 auto; 
+  margin: 0 auto;
   top: 380px;
 }
 
@@ -88,7 +88,12 @@ body {
 }
 
 $sizes: 58px, 66px, 84px, 110px;
-$positions: (-10px -212px), (-140px -134px), (-270px -80px), (-10px -134px);
+$positions: (
+  -10px -212px),
+  (-140px -134px),
+  (-270px -80px),
+  (-10px -134px
+);
 
 @for $i from 1 through length($sizes) {
   .coins-#{$i} {
@@ -103,7 +108,7 @@ $positions: (-10px -212px), (-140px -134px), (-270px -80px), (-10px -134px);
   padding-right: 8px;
   margin-top: 2px;
   justify-self: end;
-  text-decoration-line:line-through;
+  text-decoration-line: line-through;
   text-decoration-color: rgba($clr-neutral-0, 0.5);
   color: $clr-neutral-100;
   line-height: 0.75;
@@ -113,7 +118,7 @@ $positions: (-10px -212px), (-140px -134px), (-270px -80px), (-10px -134px);
   font-weight: 700;
   font-size: 38px;
   text-align: end;
-  line-height:0.75;
+  line-height: 0.75;
   margin-top: -2px;
 }
 
@@ -126,7 +131,7 @@ $positions: (-10px -212px), (-140px -134px), (-270px -80px), (-10px -134px);
   background-position: -270px -158px;
   background-repeat: no-repeat;
   font-weight: 900;
-  font-size:  28px;
+  font-size: 28px;
   line-height: 1;
 }
 
@@ -146,7 +151,8 @@ $positions: (-10px -212px), (-140px -134px), (-270px -80px), (-10px -134px);
     }
   }
 
-  &:before, &:after {
+  &:before,
+  &:after {
     content: '';
     position: absolute;
     background-image: url($sprite);
@@ -172,7 +178,9 @@ $positions: (-10px -212px), (-140px -134px), (-270px -80px), (-10px -134px);
     .btn-text {
       transform: translateY(-2px);
     }
-    &:before, &:after  {
+
+    &:before,
+    &:after {
       background-position-y: -62px;
     }
   }
@@ -191,7 +199,15 @@ $positions: (-10px -212px), (-140px -134px), (-270px -80px), (-10px -134px);
 
 // Animation for the .offer-row--limited-time
 @keyframes pulse-animation {
-  0% { background-color: rgba($clr-accent-red, 0.1);}
-  50% { background-color: rgba($clr-accent-red, 0.4);}
-  100% { background-color: rgba($clr-accent-red, 0.1);}
+  0% {
+    background-color: rgba($clr-accent-red, 0.1);
+  }
+
+  50% {
+    background-color: rgba($clr-accent-red, 0.4);
+  }
+
+  100% {
+    background-color: rgba($clr-accent-red, 0.1);
+  }
 }

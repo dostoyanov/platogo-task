@@ -1,5 +1,13 @@
-$fontWeight: (400, 600, 700, 900);
-$fontStyles: ('normal', 'italic');
+$fontWeight: (
+  400,
+  600,
+  700,
+  900
+);
+$fontStyles: (
+  'normal',
+  'italic'
+);
 
 @each $weight in $fontWeight {
   @each $style in $fontStyles {
