@@ -1,3 +1,5 @@
+<img src="platogo-web-icon.webp" alt="Platogo" width="120"/>
+
 ## Platogo CSS Challenge 
 
 This repository contains the solution to the Platogo task, along with an alternative solution using Sass for enhanced styling.
@@ -6,7 +8,7 @@ This repository contains the solution to the Platogo task, along with an alterna
 
 You can view the live demo of the project here: [Platogo Task Live Demo](https://dostoyanov.github.io/platogo-task/)
 
-![Alt text](platogo-web-icon.webp)
+
 
 Clone the repository
 
