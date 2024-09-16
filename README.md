@@ -1,5 +1,6 @@
 ## Platogo CSS Challenge 
 
+<<<<<<< HEAD
 
 
 Install dependencies 
@@ -11,6 +12,14 @@ Install dependencies
 Run devevelopment 
 
 ```bash
+=======
+Checkout https://github.com/dostoyanov/platogo-task.git
+
+Install dependencies and start the dev server
+
+```bash
+  npm install
+>>>>>>> 5238c09fb634116cf659828bfe8ae40a7312935e
   npm run dev
 ```
 
