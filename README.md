@@ -9,6 +9,12 @@ This repository contains an alternative solution to the Platogo task using:
 - CSS sprite - all image elements in one single image
 - Optimized code for clarity and performance
 
+## Live Demo
+
+You can view the live demo of the project here: [**Platogo Task Live Demo**](https://dostoyanov.github.io/platogo-task/)
+
+### Installation
+
 Clone the repository
 
 ```bash
@@ -26,7 +32,3 @@ Install dependencies and run development server
 ```bash
   npm run dev
 ```
-
-## Live Demo
-
-You can view the live demo of the project here: [**Platogo Task Live Demo**](https://dostoyanov.github.io/platogo-task/)
