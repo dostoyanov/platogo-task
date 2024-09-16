@@ -1,6 +1,6 @@
 <img src="platogo-web-icon.webp" alt="Platogo" width="120"/>
 
-## Platogo CSS Challenge 
+# Platogo CSS Challenge 
 
 This repository contains an alternative solution to the Platogo task using:
 - Sass for enhanced styling
@@ -9,11 +9,11 @@ This repository contains an alternative solution to the Platogo task using:
 - CSS sprite - all image elements in one single image
 - Optimized code for clarity and performance
 
-### Live Demo
+## Live Demo
 
-You can view the live demo of the project here: [**Platogo Task Live Demo**](https://dostoyanov.github.io/platogo-task/)
+[**Platogo Task Live Demo**](https://dostoyanov.github.io/platogo-task/)
 
-### Installation
+## Installation
 
 Clone the repository
 
