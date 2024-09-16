@@ -18,3 +18,10 @@ Deploy
 ```bash
   npm run deploy
 ```
+
+Preview dist
+
+```bash
+  npm run preview
+```
+
