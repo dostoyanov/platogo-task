@@ -7,13 +7,13 @@ Install dependencies
 ```
 
 
-To run devevelopment 
+Run devevelopment 
 
 ```bash
   npm run dev
 ```
 
-To deploy this project run
+Deploy
 
 ```bash
   npm run deploy
