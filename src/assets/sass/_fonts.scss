@@ -1,57 +1,14 @@
-@font-face {
-  font-family: "SourceSansPro";
-  font-weight: 400;
-  font-style: normal;
-  src: url("/fonts/SourceSansPro-Regular.ttf");
-  font-display: swap;
-}
-@font-face {
-  font-family: "SourceSansPro";
-  font-weight: 400;
-  font-style: italic;
-  src: url("/fonts/SourceSansPro-Italic.ttf");
-  font-display: swap;
-}
+$fontWeight: (400, 600, 700, 900);
+$fontStyles: ('normal', 'italic');
 
-@font-face {
-  font-family: "SourceSansPro";
-  font-weight: 600;
-  font-style: normal;
-  src: url("/fonts/SourceSansPro-Semibold.ttf");
-  font-display: swap;
-}
-@font-face {
-  font-family: "SourceSansPro";
-  font-weight: 600;
-  font-style: italic;
-  src: url("/fonts/SourceSansPro-SemiboldItalic.ttf");
-  font-display: swap;
-}
-@font-face {
-  font-family: "SourceSansPro";
-  font-weight: 700;
-  font-style: normal;
-  src: url("/fonts/SourceSansPro-Bold.ttf");
-  font-display: swap;
-}
-@font-face {
-  font-family: "SourceSansPro";
-  font-weight: 700;
-  font-style: italic;
-  src: url("/fonts/SourceSansPro-BoldItalic.ttf");
-  font-display: swap;
-}
-@font-face {
-  font-family: "SourceSansPro";
-  font-weight: 900;
-  font-style: normal;
-  src: url("/fonts/SourceSansPro-Black.ttf");
-  font-display: swap;
-}
-@font-face {
-  font-family: "SourceSansPro";
-  font-weight: 900;
-  font-style: italic;
-  src: url("/fonts/SourceSansPro-BlackItalic.ttf");
-  font-display: swap;
+@each $weight in $fontWeight {
+  @each $style in $fontStyles {
+    @font-face {
+      font-family: 'SourceSansPro';
+      src: url('/fonts/SourceSansPro-#{$weight}-#{$style}.ttf');
+      font-weight: #{$weight};
+      font-style: #{$style};
+      font-display: swap;
+    }
+  }
 }

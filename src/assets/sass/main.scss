@@ -29,8 +29,8 @@ body {
 .offer-row {
   display: flex;
   height: 60px;
-  background-color: rgba(0,0,0,0.25);
-  box-shadow: 1px 1px 10px rgba(0,0,0,0.3) inset, 1px 1px 1px rgba(255,255,255,0.2);
+  background-color: rgba($clr-neutral-900, 0.25);
+  box-shadow: 1px 1px 10px rgba($clr-neutral-900, 0.3) inset, 1px 1px 1px rgba($clr-neutral-0, 0.2);
   border-radius: 30px;
   padding: 5px 5px 5px 6px;
   box-sizing: border-box;
@@ -38,6 +38,8 @@ body {
   color: $clr-neutral-0;
   gap: 16px;
   user-select: none;
+  font-family: $font;
+  font-style: italic;
 }
 
 .offer-row--limited-time {
@@ -57,25 +59,20 @@ body {
   display: flex;
   align-items: center;
   padding-left: 6px;
-  font-family: $font;
   font-weight: 900;
-  font-style: italic;
   font-size: 34px;
   line-height: 50px;
   text-shadow: -1px -1px 0 rgba($clr-neutral-900, 0.3);
 }
 
 .limited-time {
-  font-family: $font;
   font-weight: 700;
-  font-style: italic;
   font-size: 26px;
   text-shadow: -1px -1px 6px rgba($clr-neutral-900, 0.6);
   color: $clr-accent-yellow;
 }
 
 // Coins
- 
 .coins-container {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -90,27 +87,18 @@ body {
   background-image: url($sprite);
 }
 
-.coins-1 {
-  width: 58px;
-  background-position: -10px -212px;
-}
-.coins-2 {
-  width: 66px;
-  background-position: -140px -134px;
-}
-.coins-3 {
-  width: 84px;
-  background-position:-270px -80px;
-}
-.coins-4 {
-  width: 110px;
-  background-position: -10px -134px;
+$sizes: 58px, 66px, 84px, 110px;
+$positions: (-10px -212px), (-140px -134px), (-270px -80px), (-10px -134px);
+
+@for $i from 1 through length($sizes) {
+  .coins-#{$i} {
+    width: nth($sizes, $i);
+    background-position: nth($positions, $i);
+  }
 }
 
 .regular-coins {
-  font-family: $font;
   font-weight: 400;
-  font-style: italic;
   font-size: 25px;
   padding-right: 8px;
   margin-top: 2px;
@@ -122,9 +110,7 @@ body {
 }
 
 .promotion-coins {
-  font-family: $font;
   font-weight: 700;
-  font-style: italic;
   font-size: 38px;
   text-align: end;
   line-height:0.75;
@@ -132,7 +118,6 @@ body {
 }
 
 // Ticket
-
 .ticket-value {
   width: 64px;
   padding-left: 28px;
@@ -140,15 +125,12 @@ body {
   background-image: url($sprite);
   background-position: -270px -158px;
   background-repeat: no-repeat;
-  font-family: $font;
   font-weight: 900;
-  font-style: italic;
   font-size:  28px;
   line-height: 1;
 }
 
 // The Button
-
 .price-btn {
   position: relative;
   display: grid;
@@ -188,9 +170,8 @@ body {
 
   &:active {
     .btn-text {
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
-
     &:before, &:after  {
       background-position-y: -62px;
     }
@@ -200,18 +181,15 @@ body {
 .btn-text {
   position: relative;
   transform: translateY(-5px);
-  font-family: $font;
   font-weight: 900;
-  font-style: italic;
   font-size: 28px;
   color: $clr-neutral-400;
   z-index: 1;
-  transition: transform 0.06s;
+  transition: transform 0.05s;
   pointer-events: none;
 }
 
 // Animation for the .offer-row--limited-time
-
 @keyframes pulse-animation {
   0% { background-color: rgba($clr-accent-red, 0.1);}
   50% { background-color: rgba($clr-accent-red, 0.4);}

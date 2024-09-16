@@ -1,11 +1,12 @@
 ## Platogo CSS Challenge 
 
+
+
 Install dependencies 
 
 ```bash
   npm install
 ```
-
 
 Run devevelopment 
 
