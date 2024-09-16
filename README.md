@@ -1,4 +1,4 @@
-<img src="platogo-web-icon.webp" alt="Platogo" width="120"/>
+<img src="platogo-web-icon.webp" alt="Platogo" width="100"/>
 
 # Platogo CSS Challenge 
 
