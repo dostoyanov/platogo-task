@@ -1,0 +1,219 @@
+@import 'fonts';
+@import 'vars';
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  height: 100dvh;
+  background-image: url(/img/background.png);
+  background-size: cover;
+}
+
+.inner-content {
+  position: relative;
+  width: 920px;
+  margin: 0 auto; 
+  top: 380px;
+}
+
+.offers-container {
+  display: grid;
+  gap: 10px;
+}
+
+// The Offer Row
+
+.offer-row {
+  display: flex;
+  height: 60px;
+  background-color: rgba(0,0,0,0.25);
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.3) inset, 1px 1px 1px rgba(255,255,255,0.2);
+  border-radius: 30px;
+  padding: 5px 5px 5px 6px;
+  box-sizing: border-box;
+  align-items: center;
+  color: $clr-neutral-0;
+  gap: 16px;
+  user-select: none;
+}
+
+.offer-row--limited-time {
+  box-shadow: 0 0 4px $clr-accent-yellow;
+  animation: pulse-animation 1.5s infinite;
+}
+
+// Promotion
+
+.promotion-value {
+  flex: 1;
+  background-image: url($sprite);
+  background-repeat: no-repeat;
+  background-position: -270px -10px;
+  height: 50px;
+  color: $clr-neutral-0;
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+  font-family: $font;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 34px;
+  line-height: 50px;
+  text-shadow: -1px -1px 0 rgba($clr-neutral-900, 0.3);
+}
+
+.limited-time {
+  font-family: $font;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 26px;
+  text-shadow: -1px -1px 6px rgba($clr-neutral-900, 0.6);
+  color: $clr-accent-yellow;
+}
+
+// Coins
+ 
+.coins-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  column-gap: 9px;
+}
+
+.coins {
+  grid-row: span 2;
+  margin-top: 2px;
+  height: 58px;
+  background-image: url($sprite);
+}
+
+.coins-1 {
+  width: 58px;
+  background-position: -10px -212px;
+}
+.coins-2 {
+  width: 66px;
+  background-position: -140px -134px;
+}
+.coins-3 {
+  width: 84px;
+  background-position:-270px -80px;
+}
+.coins-4 {
+  width: 110px;
+  background-position: -10px -134px;
+}
+
+.regular-coins {
+  font-family: $font;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 25px;
+  padding-right: 8px;
+  margin-top: 2px;
+  justify-self: end;
+  text-decoration-line:line-through;
+  text-decoration-color: rgba($clr-neutral-0, 0.5);
+  color: $clr-neutral-100;
+  line-height: 0.75;
+}
+
+.promotion-coins {
+  font-family: $font;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 38px;
+  text-align: end;
+  line-height:0.75;
+  margin-top: -2px;
+}
+
+// Ticket
+
+.ticket-value {
+  width: 64px;
+  padding-left: 28px;
+  align-self: end;
+  background-image: url($sprite);
+  background-position: -270px -158px;
+  background-repeat: no-repeat;
+  font-family: $font;
+  font-weight: 900;
+  font-style: italic;
+  font-size:  28px;
+  line-height: 1;
+}
+
+// The Button
+
+.price-btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 170px;
+  height: 52px;
+  top: 1px;
+  cursor: pointer;
+
+  &:hover {
+    .btn-text {
+      color: $clr-neutral-900;
+    }
+  }
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    background-image: url($sprite);
+    background-repeat: no-repeat;
+    background-position-y: -10px;
+    top: 0;
+    bottom: 0;
+  }
+
+  &:before {
+    background-position-x: -10px;
+    width: 50%;
+    left: 0;
+  }
+
+  &:after {
+    background-position-x: -164px;
+    left: 50%;
+    right: 0;
+  }
+
+  &:active {
+    .btn-text {
+      transform: translateY(-1px);
+    }
+
+    &:before, &:after  {
+      background-position-y: -62px;
+    }
+  }
+}
+
+.btn-text {
+  position: relative;
+  transform: translateY(-5px);
+  font-family: $font;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 28px;
+  color: $clr-neutral-400;
+  z-index: 1;
+  transition: transform 0.06s;
+  pointer-events: none;
+}
+
+// Animation for the .offer-row--limited-time
+
+@keyframes pulse-animation {
+  0% { background-color: rgba($clr-accent-red, 0.1);}
+  50% { background-color: rgba($clr-accent-red, 0.4);}
+  100% { background-color: rgba($clr-accent-red, 0.1);}
+}
