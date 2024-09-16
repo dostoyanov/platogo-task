@@ -10,7 +10,7 @@ Clone the repository
   git clone https://github.com/dostoyanov/platogo-task.git
 ```
 ```bash
-cd platogo-task
+  cd platogo-task
 ```
 
 Install dependencies and run development server
