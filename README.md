@@ -4,13 +4,7 @@ Install dependencies
 
 ```bash
   npm install
-```
-
-
-Run devevelopment 
-
-```bash
-  npm run dev
+npm run dev
 ```
 
 Deploy
