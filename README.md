@@ -24,4 +24,4 @@ Install dependencies and run development server
 
 ## Live Demo
 
-You can view the live demo of the project here: <a href="https://dostoyanov.github.io/platogo-task/" target="_blank">**Platogo Task Live Demo**</a>
+You can view the live demo of the project here: @@<a href="https://dostoyanov.github.io/platogo-task/" target="_blank">**Platogo Task Live Demo**</a>
