@@ -14,6 +14,8 @@ Install dependencies and run development server
 
 ```bash
   npm install
+```
+```bash
   npm run dev
 ```
 
