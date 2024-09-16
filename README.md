@@ -2,7 +2,12 @@
 
 ## Platogo CSS Challenge 
 
-This repository contains the solution to the Platogo task, along with an alternative solution using Sass for enhanced styling.
+This repository contains an alternative solution to the Platogo task using:
+- Sass for enhanced styling
+- Component logic
+- Data Array
+- CSS sprite - all image elements in one single image
+- Optimized code for clarity and performance
 
 Clone the repository
 
