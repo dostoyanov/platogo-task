@@ -9,6 +9,9 @@ Clone the repository
 ```bash
   git clone https://github.com/dostoyanov/platogo-task.git
 ```
+```bash
+cd platogo-task
+```
 
 Install dependencies and run development server
 
