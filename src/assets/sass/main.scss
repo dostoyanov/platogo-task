@@ -25,7 +25,6 @@ body {
 }
 
 // The Offer Row
-
 .offer-row {
   display: flex;
   height: 60px;
@@ -48,7 +47,6 @@ body {
 }
 
 // Promotion
-
 .promotion-value {
   flex: 1;
   background-image: url($sprite);
@@ -88,12 +86,7 @@ body {
 }
 
 $sizes: 58px, 66px, 84px, 110px;
-$positions: (
-  -10px -212px),
-  (-140px -134px),
-  (-270px -80px),
-  (-10px -134px
-);
+$positions: (-10px -212px), (-140px -134px), (-270px -80px),(-10px -134px);
 
 @for $i from 1 through length($sizes) {
   .coins-#{$i} {
@@ -156,22 +149,18 @@ $positions: (
     content: '';
     position: absolute;
     background-image: url($sprite);
-    background-repeat: no-repeat;
     background-position-y: -10px;
-    top: 0;
-    bottom: 0;
+    inset: 0;
   }
 
   &:before {
     background-position-x: -10px;
     width: 50%;
-    left: 0;
   }
 
   &:after {
     background-position-x: -164px;
     left: 50%;
-    right: 0;
   }
 
   &:active {
@@ -202,11 +191,9 @@ $positions: (
   0% {
     background-color: rgba($clr-accent-red, 0.1);
   }
-
   50% {
     background-color: rgba($clr-accent-red, 0.4);
   }
-
   100% {
     background-color: rgba($clr-accent-red, 0.1);
   }
