@@ -4,7 +4,7 @@ export const promotions = [
     "regular_coins": "20.000",
     "promotion_coins": "40.000",
     "ticket_value": "1",
-    "price": "€ 0,99",
+    "price": "€ 2,99",
     "coins_class": "coins-1"
   },
   {
