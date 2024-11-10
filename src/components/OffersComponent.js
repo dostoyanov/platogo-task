@@ -1,24 +1,25 @@
-export default function OffersComponent(containerId, offers) {
+export default function OffersComponent(containerId, promotions) {
   const container = document.getElementById(containerId);
 
-  offers.forEach(offer => {
-    const offerRow = document.createElement('div');
-    offerRow.classList.add('offer-row');
-    if (offer.limited_time) offerRow.classList.add('offer-row--limited-time');
+  promotions.forEach(promotion => {
 
-    offerRow.innerHTML = `
-      <span class="promotion-value">${offer.promotion_value}</span>
-      ${offer.limited_time ? `<span class="limited-time">${offer.limited_time}</span>` : ''}
+    const promotionRow = document.createElement('div');
+    promotionRow.classList.add('offer-row');
+    if (promotion.limited_time) promotionRow.classList.add('offer-row--limited-time');
+
+    promotionRow.innerHTML = `
+      <span class="promotion-value">${promotion.promotion_value}</span>
+      ${promotion.limited_time ? `<span class="limited-time">${promotion.limited_time}</span>` : ''}
       <div class="coins-container">
-        <div class="coins ${offer.coins_class}"></div>
-        <span class="regular-coins">${offer.regular_coins}</span>
-        <span class="promotion-coins">${offer.promotion_coins}</span>
+        <div class="coins ${promotion.coins_class}"></div>
+        <span class="regular-coins">${promotion.regular_coins}</span>
+        <span class="promotion-coins">${promotion.promotion_coins}</span>
       </div>
-      <span class="ticket-value">${offer.ticket_value}</span>
+      <span class="ticket-value">${promotion.ticket_value}</span>
       <div class="price-btn">
-        <div class="btn-text">${offer.price}</div>
+        <div class="btn-text">${promotion.price}</div>
       </div>
     `;
-    container.appendChild(offerRow);
+    container.appendChild(promotionRow);
   });
 }
